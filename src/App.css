@@ -50,3 +50,12 @@
 .card__buttons button:first-child{
     background-color: greenyellow;
 }
+
+
+.active__heart{
+    color: red;
+}
+
+.inactive__heart{
+    color: #fff;
+}

@@ -1,7 +1,12 @@
-import { CiHeart } from "react-icons/ci";
 
+import { useState } from "react";
+
+import { FaHeart } from "react-icons/fa";
 
 function CardList({data}) {
+
+    const [like , setLike ] = useState(false)
+    
   return (
     <>
     <div className="card__container">
@@ -12,7 +17,9 @@ function CardList({data}) {
             <img src={item.Image} alt="" className='card__img' />
             <div className="card__details">
                 <span className="card__price">{item.Price}$</span>
-                <CiHeart />
+                <FaHeart className={`like ${like && "active__heart"}`} onClick={()=>{
+                    setLike(true)
+                }}/>
             </div>
 
             <div className="card__buttons">
